@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreatingStatus = 'No server was created yet...';
-  serverName = 'Testserver';
+  serverName = 'Server name...';
+  serverCreated = false;
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -19,7 +21,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    this.serverCreatingStatus = 'A new server was created!';
+    this.serverCreated = true;
+    this.serverCreatingStatus = `A new server was created! Server Name: ${this.serverName}`;
   }
 
 //  This method is no longer being called

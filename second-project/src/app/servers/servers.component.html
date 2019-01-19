@@ -13,7 +13,7 @@
          placeholder="Server Name"
          [(ngModel)]="serverName">
   <br>
-  <label>Server Name: {{ serverName }}</label>
+  <!-- <label>Server Name: {{ serverName }}</label> -->
 </div>
 <br>
 
@@ -22,7 +22,15 @@
     Add Server: {{ allowNewServer }}
 </button>
 <br><br>
-<p>{{ serverCreatingStatus }}</p>
+<!-- <p>{{ serverCreatingStatus }}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">A new server was created! Server Name: {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No server was created!</p>
+</ng-template> -->
+
+<p *ngIf="serverCreated">A new server was created! Server Name: {{ serverName }}</p>
+
+
 
 <!-- Property Binding -->
 <!-- <p>{{ allowNewServer }}</p> -->
