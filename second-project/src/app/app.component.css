@@ -1,4 +1,4 @@
-.container {
+.card {
   position: relative;
   top: 30px;
   padding: 10px;
@@ -10,7 +10,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.container:hover {
+.card:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   top: 32px;
 }
