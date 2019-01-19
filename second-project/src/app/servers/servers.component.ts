@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreatingStatus = 'No server was created yet...';
-  serverName = '';
+  serverName = 'Testserver';
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -22,6 +22,8 @@ export class ServersComponent implements OnInit {
     this.serverCreatingStatus = 'A new server was created!';
   }
 
+//  This method is no longer being called
+//  because we're using a Two-Way-Binding on the template
   onUpdateServerName(event: Event){
     this.serverName = (<HTMLInputElement>event.target).value;
   }
