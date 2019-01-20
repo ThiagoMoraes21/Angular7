@@ -1,4 +1,6 @@
 <p>
   The server with Id: {{ serverId }} is
-  <span [ngStyle]="{color: getColor()}">{{ getServerStatus() }}</span>
+  <span [ngStyle]="{color: getColor()}" [ngClass]="{online: serverStatus === 'online'}">
+    {{ getServerStatus() }}
+  </span>
 </p>
