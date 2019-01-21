@@ -1,9 +1,0 @@
-.alert-success {
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.alert-success:hover {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
