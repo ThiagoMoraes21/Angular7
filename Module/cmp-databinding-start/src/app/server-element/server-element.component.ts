@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ServerElementComponent implements OnInit {
   //  Pass data from parent to child with input binding
-  @Input() element: {type: string, name: string, content: string};
+  @Input('element') element: {type: string, name: string, content: string};
 
   constructor() { }
 
