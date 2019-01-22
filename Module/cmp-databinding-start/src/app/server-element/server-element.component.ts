@@ -2,6 +2,9 @@ import {
    Component,
    OnInit,
    Input,
+   ViewChild,
+   ContentChild,
+   ElementRef,
    OnChanges,
    SimpleChanges,
    DoCheck,
@@ -22,6 +25,9 @@ export class ServerElementComponent
   //  Pass data from parent to child with input binding
   @Input('element') element: {type: string, name: string, content: string};
   @Input('name') name: string;
+  @ViewChild('heading') header: ElementRef;
+  @ContentChild('contentParagraph') paragraph: ElementRef;
+
   constructor() {
     console.log('Constructor called!');
   }
@@ -33,6 +39,8 @@ export class ServerElementComponent
 
   ngOnInit() {
     console.log('ngOnInit called!');
+    console.log('Text Content: ' + this.header.nativeElement.textContent);
+    console.log('Paragraph Text Content: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngDoCheck() {
@@ -41,6 +49,7 @@ export class ServerElementComponent
 
   ngAfterContentInit() {
     console.log('ngAfterContentInit called!');
+    console.log('Paragraph Text Content: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
@@ -49,6 +58,7 @@ export class ServerElementComponent
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called!');
+    console.log('Text Content: 'this.header.nativeElement.textContent);
   }
   ngAfterViewChecked() {
     console.log('ngAfterViewChecked called!');
