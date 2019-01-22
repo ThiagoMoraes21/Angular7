@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Course-Project';
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string){
+    this.loadedFeature = feature;
+  }
 
   constructor(){
 
