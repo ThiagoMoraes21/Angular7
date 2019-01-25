@@ -21,5 +21,7 @@ export class AccountComponent {
     this.accountsService.updateStatus(this.id, status);
     //  Create an instance of a service and access it's method to log the server status
     // this.loggingService.logStatusChange(status);
+
+    this.accountsService.statusUpdated.emit(status);
   }
 }
