@@ -44,6 +44,14 @@
 
       <p appHighLight>Styled with basic directive!</p>
       <p appBetterHighlight>Better Styled with a directive! HOVER OVER</p>
+
+      <!-- Using ngSwitch -->
+      <div class="container" [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value 5</p>
+        <p *ngSwitchCase="10">Value 10</p>
+        <p *ngSwitchCase="100">Value 100</p>
+        <p *ngSwitchDefault>Value Default</p>
+      </div>
     </div>
   </div>
 </div>
