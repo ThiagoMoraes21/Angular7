@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoggingService } from '../logging.service';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-account',
@@ -10,15 +11,14 @@ import { LoggingService } from '../logging.service';
 export class AccountComponent {
   @Input() account: {name: string, status: string};
   @Input() id: number;
-  @Output() statusChanged = new EventEmitter<{id: number, newStatus: string}>();
 
   // Tells Angular that we want to use the service
-  constructor(private loggingService: LoggingService) {}
+  constructor(
+    private loggingService: LoggingService,
+    private accountsService: AccountsService) {}
 
   onSetTo(status: string) {
-    this.statusChanged.emit({id: this.id, newStatus: status});
-    // console.log('A server status changed, new status: ' + status);
-
+    this.accountsService.updateStatus(this.id, status);
     //  Create an instance of a service and access it's method to log the server status
     this.loggingService.logStatusChange(status);
   }
