@@ -17,9 +17,15 @@ export class ShoppingListService {
     return this.ingredients.slice();   //  Return a copy of the array
   }
 
+  // Add sigle a ingredient at a time
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
     this.ingredientsChange.emit(this.ingredients.slice());
   }
 
+  // Add multiple ingredients
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.ingredientsChange.emit(this.ingredients.slice());
+  }
 }
