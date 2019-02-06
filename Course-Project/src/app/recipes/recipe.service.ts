@@ -11,7 +11,8 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       'Test Recipe',
-      'As the name suggests it is a test recipe. Dah! It is a long established fact that a reader will be distracted by',
+      'As the name suggests it is a test recipe. Dah! It is a long established
+      fact that a reader will be distracted by',
       'https://source.unsplash.com/Pt_YmiYm7a4',
       [
         new Ingredient('Rice', 1),
@@ -22,7 +23,8 @@ export class RecipeService {
     ),
     new Recipe(
       'Test Recipe 2',
-      `It is a long established fact that a reader will be distracted by the readable content of a page when looking.`,
+      `It is a long established fact that a reader will be distracted by the
+      readable content of a page when looking.`,
       'https://source.unsplash.com/bpPTlXWTOvg',
       [
         new Ingredient('Fish', 2),
