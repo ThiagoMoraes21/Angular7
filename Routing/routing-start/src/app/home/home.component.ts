@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
   }
 
   onLoadServers() {
-   // load the servers...
-
+    //
+   // Do something
+  //
    this.router.navigate(['/servers']); // then redirect to the servers component
   }
 }
