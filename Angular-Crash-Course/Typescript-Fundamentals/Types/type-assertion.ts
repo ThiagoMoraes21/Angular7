@@ -7,8 +7,8 @@ let message; // type any
 //  the variable won't get access to the embedded methods of it's type
 message = 'abc'; 
 
-// The variable message, doesn't get the 'endsWith' method that any variable of type string get
-//  because if was priveously declared withou an initialization
+// The variable 'message', doesn't get the 'endsWith' method that any variable of type string gets
+//  because if was previously declared without an initialization
 
 let noEndsWith = message.endsWith('c'); // nop
 
